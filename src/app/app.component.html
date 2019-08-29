@@ -1,2 +1,12 @@
-<router-outlet></router-outlet>
-<!--https://youtu.be/1bL1a6KGWbY?list=PLDqVN4u4m3K_SMX2ddRUa_VLqC1xwx_0Y&t=435-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-sidenav-list></app-sidenav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header (SideNavigationToggle)="sidenav.toggle()"></app-header>
+    <app-navtabs></app-navtabs>
+  </mat-sidenav-content>
+
+  <router-outlet></router-outlet>
+</mat-sidenav-container>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MaterialModule } from './material.module';
 import {AccomdationComponent} from './accomdation/accomdation.component';
 import {CelebrationsComponent} from './celebrations/celebrations.component';
 import {FoodAndBeverageComponent} from './food-and-beverage/food-and-beverage.component';
@@ -9,7 +8,7 @@ import {WeddingsComponent} from './weddings/weddings.component';
 import {OffersComponent} from './offers/offers.component';
 import {SigninComponent} from './auth/signin/signin.component';
 import {SignupComponent} from './auth/signup/signup.component';
-
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   { path: 'accommodation', component: AccomdationComponent },
@@ -19,9 +18,9 @@ const routes: Routes = [
   { path: 'weddings', component: WeddingsComponent},
   { path: 'offers', component: OffersComponent },
   { path: 'signin', component: SigninComponent},
-  { path: 'signup', component: SignupComponent}
+  { path: 'signup', component: SignupComponent},
+  { path: '', component: HomeComponent}
 ];
-// https://youtu.be/1bL1a6KGWbY?list=PLDqVN4u4m3K_SMX2ddRUa_VLqC1xwx_0Y&t=99
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
